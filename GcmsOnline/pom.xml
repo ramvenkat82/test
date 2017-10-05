@@ -7,9 +7,6 @@
 	<artifactId>GcmsOnline</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
-    <!-- <name>AssetManagementSystem</name>
-    <description>AssetManagementSystem</description> -->
     
     <name>GcmsOnline</name>
   	<description>GCMSSystem</description>
