@@ -1,0 +1,44 @@
+package com.dnb.gcmsOnline.dao;
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.dnb.ModelUtility.HibernateUtil;
+import com.dnb.model.GcmsCoText;
+
+@Repository
+public class GcmsCoTextDAO {
+	
+	@Autowired
+    private HibernateUtil hibernateUtil;
+
+	
+	public List<GcmsCoText> getAllGcmsCoText() {
+		SessionFactory sessionFactory = hibernateUtil.getSessionFactory();
+		  Session session = sessionFactory.openSession();
+
+
+    	  List<GcmsCoText> GcmsCoTextList = session.createQuery("from GcmsCoText").setFetchSize(10).list();
+    	 session.close();
+    	  return GcmsCoTextList;
+
+	}
+	
+	public List<GcmsCoText> getGcmsCoTextById(Long duns) {
+		SessionFactory sessionFactory = hibernateUtil.getSessionFactory();
+		  Session session = sessionFactory.openSession();
+		  List<GcmsCoText> gcmsCoTextList =  session.createCriteria(GcmsCoText.class)
+				  .add(Restrictions.eq("id.gcmsDuns", BigDecimal.valueOf(duns))).list();    	 
+  
+    	  session.close();
+    	  return gcmsCoTextList;
+
+	}
+
+	
+}

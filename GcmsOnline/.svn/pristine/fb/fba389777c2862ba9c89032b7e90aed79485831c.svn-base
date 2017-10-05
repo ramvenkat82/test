@@ -1,0 +1,14 @@
+package com.dnb.gcmsOnline.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.dnb.ModelUtility.HibernateUtil;
+
+@Configuration
+public class DBConfig {
+	  @Bean
+	  public HibernateUtil getHibernateUtil(){
+		  return new HibernateUtil();
+	  }
+}
