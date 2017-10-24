@@ -1,9 +1,0 @@
-com\dnb\gcmsOnline\Model\CoTextWrapper.class
-com\dnb\gcmsOnline\controller\HomeController.class
-com\dnb\gcmsOnline\configuration\DBConfig.class
-com\dnb\gcmsOnline\dao\GcmsCoTextDAO.class
-com\dnb\gcmsOnline\dao\GcmsTextTypesDAO.class
-com\dnb\gcmsOnline\MyApplication.class
-com\dnb\gcmsOnline\service\GcmsCoTextService.class
-com\dnb\gcmsOnline\controller\GcmsTextTypesController.class
-com\dnb\gcmsOnline\service\GcmsTextTypesService.class
